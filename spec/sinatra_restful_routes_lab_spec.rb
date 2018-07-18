@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe "Recipe App" do
   let(:recipe_name) { "Bomb.com Mac and Cheese" }
@@ -58,6 +59,7 @@ describe "Recipe App" do
     end
 
     it 'deletes via a DELETE request' do
+      # binding.pry
       expect(last_response.body).to include('<input id="hidden" type="hidden" name="_method" value="delete">')
     end
   end
